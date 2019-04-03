@@ -1,11 +1,11 @@
-    var config = {
-        apiKey: "AIzaSyCLZs6xiRbBkiIZRBalWISyrNL9cHWSQ38",
-        authDomain: "movie-night-aec0c.firebaseapp.com",
-        databaseURL: "https://movie-night-aec0c.firebaseio.com",
-        projectId: "movie-night-aec0c",
-        storageBucket: "movie-night-aec0c.appspot.com",
-        messagingSenderId: "1070295966731"
-      };
+var config = {
+    apiKey: "AIzaSyCLZs6xiRbBkiIZRBalWISyrNL9cHWSQ38",
+    authDomain: "movie-night-aec0c.firebaseapp.com",
+    databaseURL: "https://movie-night-aec0c.firebaseio.com",
+    projectId: "movie-night-aec0c",
+    storageBucket: "movie-night-aec0c.appspot.com",
+    messagingSenderId: "1070295966731"
+  };
  
  firebase.initializeApp(config);
  
