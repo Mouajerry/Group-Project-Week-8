@@ -25,4 +25,5 @@
     var message = data.val().text;
     var messageElement = $("<p>").text(message);
     $("#message-container").append(messageElement);
+    // Backend
  });
