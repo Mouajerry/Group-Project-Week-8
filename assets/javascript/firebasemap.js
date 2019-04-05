@@ -11,6 +11,7 @@ var data = {
   lng: null
 };
 
+
 function makeInfoBox(controlDiv, map) {
   // Set CSS for the control border.
   var controlUI = document.createElement('div');
@@ -179,3 +180,4 @@ function addToFirebase(data) {
     });
   });
 }
+
