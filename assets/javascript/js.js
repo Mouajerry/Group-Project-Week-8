@@ -55,7 +55,7 @@
          movieDiv.append(image);
 
          // Putting the entire movie above the previous movies
-         $("#movies-view").prepend(movieDiv);
+         $("#movies-view").html(movieDiv);
        });
 
      }
@@ -89,16 +89,15 @@
        event.preventDefault();
        // This line grabs the input from the textbox
        var movie = $("#movie-input").val().trim();
-
+     
        // Adding movie from the textbox to our array
        movies.push(movie);
-
+       
        // Calling renderButtons which handles the processing of our movie array
        renderButtons();
      });
 
      // Adding a click event listener to all elements with a class of "movie-btn"
      $(document).on("click", ".movie-btn", displayMovieInfo);
-
      // Calling the renderButtons function to display the intial buttons
      renderButtons();
