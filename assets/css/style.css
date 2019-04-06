@@ -1,20 +1,80 @@
-/* #map {
-    height: 50%;
-  } */
+body {
+  background-image: url('../images/pop.jpg');
+  background-size: 50%;
+  background-attachment: fixed;
+}
+
+.container {
+  background-color:rgba(255, 255, 255, 0.9);
+  opacity: initial;
+}
+  .navbar-brand {
+  padding-left: 50px;
+  font-size: 35px;
+  font-family: 'Dosis', sans-serif;
+ }
+
   #map {
     height: 400px;
-    /* width: 100%; */
+    padding-top: 10px;
   }
 
-  .message-box {
-    margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 2px solid black;
-    height: auto;
-    width: 60%;
-    text-align: center;
-  }
-
-  nav{
-    margin: 0em 0em 2em 0em;
+.message-box {
+  margin: 1px auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid black;
+  height: 25em;
+  width: 60%;
+  overflow: scroll;
 }
+
+.submit {
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid black;
+  height: 50%;
+  width: 60%;
+}
+
+#add-movie, #search-zip, button {
+  border-color: blue;
+  background-color: #0047b3;
+  border-radius: 12px;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+}
+
+nav{
+  margin: 0em 0em 1em 0em;
+}
+
+.movie-table {
+  margin: 1px auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid black;
+  height: 25em;
+  width: 60%;
+}
+.search-title, #movie-form {
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+}
+
+.panel-title {
+  color: black;
+  font-family: 'Dosis', sans-serif;
+}
+
+
+
+ .user-search {
+   padding-left: 300px;
+   font-family: 'Dosis', sans-serif;
+ }
+
+ #zip-form {
+  color:white;
+  margin-bottom: 10px;
+ }
+

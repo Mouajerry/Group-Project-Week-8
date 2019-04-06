@@ -8,6 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   <title>Movie-Section</title>
   <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -24,46 +25,76 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <!-- <li class="nav-item active">
-          <a class="nav-link" href="movie.html" style="color: #ffffff">Movie Search<span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="chat.html" style="color: #ffffff">Message board</a>
-        </li> -->
-      </ul>
-    </div>
+      <ul class="navbar-nav mr-auto"><li>
+        <ul class="user-search">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            <h3 class="search-title">Find a Movie</h3>
+            <div>
+            <div class="panel-body">
+            <form id="movie-form">
+              <input type="text" id="movie-input" placeholder="Search movie by title">
+
+            <!-- Button triggers new movie to be added -->
+            <input id="add-movie" type="submit" value="Search Movie">
+            </form>
+    </li>
+  </ul>
+</div>
   </nav>
-  <div class="container">
-
-
-
-    <div id="map"></div>
 
     <!-- Rendered Buttons will get Dumped Here  -->
-    <div id="buttons-view"></div>
+    <div class="container">
 
-    <form id="movie-form">
-      <label for="movie-input">Add a Movie, Yo!</label>
-      <input type="text" id="movie-input">
-      <br>
-
-      <!-- Button triggers new movie to be added -->
-      <input id="add-movie" type="submit" value="Add a Movie, Yo!">
-    </form>
-
-    <!-- Movies will Get Dumped Here -->
-    <div id="movies-view"></div>
-
-    <div class="message-box">
-      <input id="message-text" type="text" />
-      <button id="send-button">Submit Message</button>
-      <div id="message-container">
-        <p>Chat Text!</p>
+                <div class="row">
+                <div class="col-md-4">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                <h3 class="panel-title"><strong>New Release</strong></h3>
+                </div>
+                <div class="panel-body">
+                <table class="table table-hover" id="movie-table">
+                <thead>
+                <tr>
+      <div id="poster-view"></div>        
+      <div id="buttons-view"></div>
+      <div class="col-md-4"></div>
+      <div id="movies-view"></div>
+      </tr>
+      </thead>
+      <tbody id="movie-table-rows">
+      </tbody>
+      </table>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-4">
+              <form id="zip-form">
+                <input type="text" id="zip-input" placeholder="Search by zipcode">
+  
+              <input id="search-zip" type="submit" value="Add Zipcode">
+              </form>
+        <div id="map"></div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
-
+  </div>
+      <div class="row">
+        <div class="col-md-12">
+    <div class="submit">
+      <input id="message-text" type="text" style="width: 50%;"/>
+      <button id="send-button">Submit Message</button>
+      </div>
+      </div>
+      <div class="message-box">
+      <div id="message-container">
+      <p>Chat Text!</p>
+      </div>
+      </div>
+    </div>
+    </div>
   </div>
 
   <script src="assets/javascript/firebasemap.js"></script>
@@ -71,7 +102,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuMeWBjSEOJni_Otp-3FhbXIyL-kwSZ2k&callback=initMap">
     </script>
   <script src="assets/javascript/message.js"></script>
-  <script src="assets/javascript/js.js"></script>
+  <script src="assets/javascript/movie.js"></script>
 </body>
 
 </html>
