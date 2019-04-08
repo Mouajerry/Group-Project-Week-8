@@ -55,10 +55,11 @@ nav{
   height: 25em;
   width: 60%;
 }
-.search-title, #movie-form {
+.search-title, #movie-form, #zip-form {
   color: white;
   font-family: 'Dosis', sans-serif;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .panel-title {
@@ -66,15 +67,7 @@ nav{
   font-family: 'Dosis', sans-serif;
 }
 
-
-
  .user-search {
    padding-left: 300px;
    font-family: 'Dosis', sans-serif;
  }
-
- #zip-form {
-  color:white;
-  margin-bottom: 10px;
- }
-

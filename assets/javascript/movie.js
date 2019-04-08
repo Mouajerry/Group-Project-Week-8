@@ -11,6 +11,7 @@ $.ajax({
        "territory": "US",
        "device-datetime": "2019-04-05T08:30:17.360Z"
    }
+
 }).then(function (response) {
    renderButtons(response);
    console.log(response.films[0].age_rating[0].rating);
