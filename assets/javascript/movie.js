@@ -18,6 +18,18 @@ $.ajax({
    console.log(response.films[0].images.poster[1].medium.film_image);
    console.log(response);
 
+//    <div class="carousel-item active" data-interval="10000">
+//     <img src="..." class="d-block w-100" alt="...">
+//     </div>
+//     <div class="carousel-item" data-interval="2000">
+//     <img src="..." class="d-block w-100" alt="...">
+//     </div>
+//     <div class="carousel-item">
+//     <img src="..." class="d-block w-100" alt="...">
+//     </div>
+
+    var isActive = false;
+
    for (var i = 0; i < response.films.length; i++) {
        var filmName = response.films[i].film_name;
        var filmImage = response.films[i].images.poster[1].medium.film_image;
@@ -37,7 +49,22 @@ $.ajax({
        singleMovieDiv.append(filmDiv, "Rating: " + filmRating, trailerButton);
        $("#movies-view").append(singleMovieDiv);
        $("#poster-view").append(image)
+
+       var carouselDiv = $("<div>");
+       carouselDiv.addClass("carousel-item");
+       carouselDiv.attr("data-interval", "2000");
+       if(!isActive){
+           carouselDiv.addClass("active");
+           isActive = !isActive
+       }
+       var img = $("<img>");
+       img.attr("src", filmImage);
+       img.addClass("d-block w-100");
+       carouselDiv.append(img);
+       console.log(carouselDiv);
+       $(".carousel-inner").append(carouselDiv);
    }
+   
 
 });
 
