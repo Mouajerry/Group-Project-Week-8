@@ -71,3 +71,7 @@ nav{
    padding-left: 300px;
    font-family: 'Dosis', sans-serif;
  }
+
+ #carouselExampleInterval {
+   width: 55%;
+ }
