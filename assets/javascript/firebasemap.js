@@ -9,24 +9,29 @@
 //   var marker1 = new google.maps.Marker({position: location1, map: map});
 //   var marker2 = new google.maps.Marker({position: location2, map: map});
 // }
-
+var userZip;
 var map;
 var service;
 var infowindow;
 var map;
      var service;
      var infowindow;
+     $(document).on("click", "#search-zip", function(event) {
+       event.preventDefault();
+       userZip = $("#zip-input").val().trim();
+       initMap();
+     })
 
      function initMap() {
+       console.log('here')
        var sydney = new google.maps.LatLng(-94.70188999999999, 38.8984667);
 
        infowindow = new google.maps.InfoWindow();
 
        map = new google.maps.Map(
            document.getElementById('map'), {center: sydney, zoom: 12});
-
        var request = {
-         query: 'movie theaters 66223',
+         query: 'movie theaters' + ` ${userZip}`,
          fields: ['name', 'geometry'],
        };
 
