@@ -1,11 +1,61 @@
+
+
+var map;
+var service;
+var infowindow;
+var map;
+     var service;
+     var infowindow;
+
+     function initMap() {
+       var sydney = new google.maps.LatLng(-94.70188999999999, 38.8984667);
+
+       infowindow = new google.maps.InfoWindow();
+
+       map = new google.maps.Map(
+           document.getElementById('map'), {center: sydney, zoom: 12});
+
+       var request = {
+         query: 'movie theaters 66223',
+         fields: ['name', 'geometry'],
+       };
+
+       service = new google.maps.places.PlacesService(map);
+
+       service.findPlaceFromQuery(request, function(results, status) {
+         console.log(results)
+         if (status === google.maps.places.PlacesServiceStatus.OK) {
+           for (var i = 0; i < results.length; i++) {
+             createMarker(results[i]);
+           }
+
+           map.setCenter(results[0].geometry.location);
+         }
+       });
+     }
+
+     function createMarker(place) {
+       var marker = new google.maps.Marker({
+         map: map,
+         position: place.geometry.location
+       });
+
+       google.maps.event.addListener(marker, 'click', function() {
+         infowindow.setContent(place.name);
+         infowindow.open(map, this);
+       });
+     }
+
+
+
 function initMap() {
   var userLocation = {lat: 38.90, lng: -94.82};
   var location1 = {lat: 38.50, lng: -94.50};
   var location2 = {lat: 38.00, lng: -94.25};
-  // The map, centered at userLocation
+  //The map, centered at userLocation
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 7, center: userLocation});
-  // The markers, positioned at movie theater locations
+     document.getElementById('map'), {zoom: 7, center: userLocation});
+ //The markers, positioned at movie theater locations
   var marker1 = new google.maps.Marker({position: location1, map: map});
   var marker2 = new google.maps.Marker({position: location2, map: map});
 }
