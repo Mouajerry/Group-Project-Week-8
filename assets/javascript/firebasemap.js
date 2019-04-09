@@ -1,4 +1,14 @@
-
+// function initMap() {
+//   var userLocation = {lat: 38.90, lng: -94.82};
+//   var location1 = {lat: 38.50, lng: -94.50};
+//   var location2 = {lat: 38.00, lng: -94.25};
+//   // The map, centered at userLocation
+//   var map = new google.maps.Map(
+//       document.getElementById('map'), {zoom: 7, center: userLocation});
+//   // The markers, positioned at movie theater locations
+//   var marker1 = new google.maps.Marker({position: location1, map: map});
+//   var marker2 = new google.maps.Marker({position: location2, map: map});
+// }
 
 var map;
 var service;
@@ -45,20 +55,6 @@ var map;
          infowindow.open(map, this);
        });
      }
-
-
-
-function initMap() {
-  var userLocation = {lat: 38.90, lng: -94.82};
-  var location1 = {lat: 38.50, lng: -94.50};
-  var location2 = {lat: 38.00, lng: -94.25};
-  //The map, centered at userLocation
-  var map = new google.maps.Map(
-     document.getElementById('map'), {zoom: 7, center: userLocation});
- //The markers, positioned at movie theater locations
-  var marker1 = new google.maps.Marker({position: location1, map: map});
-  var marker2 = new google.maps.Marker({position: location2, map: map});
-}
 
 // var firebase = new Firebase('https://fire-map-tutorial.firebaseio.com/');
 
