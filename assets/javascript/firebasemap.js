@@ -9,11 +9,13 @@
 //   var marker1 = new google.maps.Marker({position: location1, map: map});
 //   var marker2 = new google.maps.Marker({position: location2, map: map});
 // }
+
 var userZip;
 var map;
 var service;
 var infowindow;
 var map;
+
      var service;
      var infowindow;
      $(document).on("click", "#search-zip", function(event) {
