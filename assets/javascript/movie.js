@@ -3,13 +3,13 @@ $.ajax({
   url: 'https://api-gate2.movieglu.com/filmsNowShowing/?n=10',
   method: "GET",
   headers: {
-      "client": "MOVI_37",
-      "x-api-key": "cFx9t6rLTOa7PJuzXlQa138h5SP8rMgb6QZzjYYi",
-      "Authorization": "Basic TU9WSV8zNzphSDdVeU5zYUF5WE8=",
+      "client": "MOVI_39",
+      "x-api-key": "6Qji5lwzQd15MNSfpoUMk5YWSTFQc4ag87PHEITR",
+      "Authorization": "Basic TU9WSV8zOTpPcUNCeHJLNGd4Szc=",
       "api-version": "v200",
       "Geolocation": getLocation(),//"38.90;-94.82"(OP, Kansas coordinates)
       "territory": "US",
-      "device-datetime": "2019-04-05T08:30:17.360Z"
+      "device-datetime": "2019-04-12T08:30:17.360Z"
   }
 
 }).then(function (response) {
